@@ -1,0 +1,15 @@
+main {
+  width: 100%;
+  display: flex;
+}
+
+main div {
+  width: 50%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

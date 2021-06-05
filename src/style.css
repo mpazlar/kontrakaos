@@ -7,23 +7,59 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
-
-.container {
-  max-width: 26rem;
-  margin-right: auto;
-  margin-left: auto;
+body {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-header {
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.nav__logo {
+  display: flex;
+}
+
+.nav__logo a {
+  width: 15%;
+}
+
+.nav__home,
+.nav__about,
+.nav__app,
+.nav__blog {
+  margin: 10px;
+  text-decoration: none;
+}
+
+footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 4rem;
 }
 
-.logo {
-  width: 10rem;
-  height: 10rem;
-  background-image: url(./img/rocket.svg);
-  background-size: contain;
+.icons__social a {
+  margin: 5px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

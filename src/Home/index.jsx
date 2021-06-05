@@ -1,25 +1,27 @@
 import React from 'react';
+import './style.css';
 
 export const Home = () => {
   return (
     <main>
-      <h1>KontraKaos</h1>
-      <h5>Tady bude nějakej claim</h5>
-      <a href="/kontrakaos">
-        <button>Chci si vyzkoušet aplikaci</button>
-      </a>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-        sunt odit minus atque ullam necessitatibus, rerum saepe numquam sint
-        mollitia in voluptatibus nostrum natus, facilis expedita quae possimus!
-        Numquam, quam. Molestiae quia deserunt exercitationem modi?
-      </p>
-      {/* Sem dáme to naše ukazovací video */}
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/uMCSdgkdOJc"
-      ></iframe>
+      <div className="left">
+        <h1>KontraKaos</h1>
+        <p>Tady bude claim</p>
+        <a href="/kontrakaos">Chci vyzkoušet aplikaci!</a>
+      </div>
+      <div className="right">
+        <p>
+          Koš přetéká špinavým prádlem. Dřez je plný nádobí. Lednička zeje
+          prázdnotou. Pes by potřeboval vykoupat a zahrada posekat. Když je o
+          domácnost dobře postaráno, není to skoro vidět. Jakmile to ale
+          nefunguje, je to chaos. Často se stává, že vypořádání se s tímto
+          chaosem leží na bedrech několika málo lidí. Potom je péče o domácnost
+          taky pěkná otrava. Proto jsme stvořily KontraKaos, který vám pomůže se
+          spravedlivým rozdělením domácích prací mezi členy a členky domácnosti.
+          Do aplikace jednoduše zadáte domácí práce a KontraKaos se již postará
+          o to, aby se všichni na domácích pracích podíleli stejným dílem.
+        </p>
+      </div>
     </main>
   );
 };

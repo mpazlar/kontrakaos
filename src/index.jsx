@@ -6,45 +6,86 @@ import { Aplikace } from './Aplikace';
 import { Home } from './Home';
 import { About } from './About';
 import { Blog } from './Blog';
-import { Footer } from './Footer';
 
-const App = () => (
-  <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">O nás</Link>
-          </li>
-          <li>
-            <Link to="/kontrakaos">Aplikace</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-        </ul>
-      </nav>
+const App = () => {
+  return (
+    <>
+      <Router>
+        <div className="page">
+          <nav>
+            <div className="nav__logo">
+              <a href="index.html">
+                <img
+                  className="logo__img"
+                  src="./assets/logo_prototyp.png"
+                  alt=""
+                />
+              </a>
+              <h2>KontraKaos</h2>
+            </div>
 
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/kontrakaos">
-          <Aplikace />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/blog">
-          <Blog />
-        </Route>
-      </Switch>
-    </div>
-    <Footer />
-  </Router>
-);
+            <div className="nav__links">
+              <Link to="/" className="nav__home">
+                Home
+              </Link>
+
+              <Link to="/about" className="nav__about">
+                O nás
+              </Link>
+
+              <Link to="/kontrakaos" className="nav__app">
+                Aplikace
+              </Link>
+
+              <Link to="/blog" className="nav__blog">
+                Blog
+              </Link>
+            </div>
+          </nav>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/kontrakaos">
+              <Aplikace />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/blog">
+              <Blog />
+            </Route>
+          </Switch>
+
+          <footer>
+            <div>Vytvořeno v rámci Czechitas DA©</div>
+            <div>
+              <a target="_blank" href="mailto:m.pazlarova@gmail.com">
+                Napište nám
+              </a>
+            </div>
+            <div className="icons__social">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/magda.pazlarova/"
+              >
+                <img height={20} src="./assets/fb.svg" alt="Facebook" />
+              </a>
+              <a target="_blank" href="https://www.instagram.com/m.pazlar/">
+                <img height={20} src="./assets/ig.svg" alt="Instagram" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCtK3lKupYOpFya4_QskBQFg"
+              >
+                <img height={20} src="./assets/yt.svg" alt="Youtube" />
+              </a>
+            </div>
+          </footer>
+        </div>
+      </Router>
+    </>
+  );
+};
 
 render(<App />, document.querySelector('#app'));
