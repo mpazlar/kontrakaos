@@ -3,7 +3,7 @@ import './style.css';
 
 export const Home = () => {
   return (
-    <main>
+    <main className="main__home">
       <div className="left">
         <h1>KontraKaos</h1>
         <p>Tady bude claim</p>

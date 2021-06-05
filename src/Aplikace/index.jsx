@@ -1,20 +1,11 @@
 import React from 'react';
+import './style.css';
+import { Table } from '../Table';
 
-export const Aplikace = () => {
+const Prace = () => {
   return (
-    <main>
-      <h1>KontraKaos Aplikace</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-        voluptatibus exercitationem sequi excepturi, laborum placeat fuga
-        praesentium molestiae illum nemo eum hic dolores.
-      </p>
-      {/* Tohle je jedna práce  */}
-      <div>
-        <h4>Kolik lidí?</h4>
-        <input type="text" id="1" placeholder="Jméno osoby 1" /> <br />
-        <input type="text" id="2" placeholder="Jméno osoby 2" />
-        <button>+</button>
+    <>
+      <div className="prace">
         <h4>Jaká práce?</h4>
         <input type="text" name="" id="" placeholder="Název práce" />
         <h4>Jak dlouho trvá práci udělat?</h4>
@@ -41,7 +32,46 @@ export const Aplikace = () => {
           <option value="7_týdne">každý den</option>
         </select>
       </div>
+    </>
+  );
+};
+
+const Osoba = () => {
+  return <input type="text" id="1" placeholder="Jméno osoby 1" />;
+};
+
+export const Aplikace = () => {
+  return (
+    <main className="main__app">
+      <h1>KontraKaos Aplikace</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        voluptatibus exercitationem sequi excepturi, laborum placeat fuga
+        praesentium molestiae illum nemo eum hic dolores.
+      </p>
+      {/* Tohle je jedna práce  */}
+
+      <h4>Kolik lidí?</h4>
+      <div className="box__osoby">
+        <div className="inputs">
+          <input type="text" id="1" placeholder="Jméno osoby 1" /> <br />
+          <input type="text" id="2" placeholder="Jméno osoby 2" />
+          <Osoba />
+          <Osoba />
+        </div>
+        <button className="button__add">+</button>
+      </div>
+
+      <div className="box__prace">
+        <Prace />
+        <Prace />
+        <Prace />
+        <Prace />
+      </div>
+
       <button>Přidat práci</button>
+
+      <Table />
     </main>
   );
 };

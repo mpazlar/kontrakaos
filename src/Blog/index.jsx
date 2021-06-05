@@ -1,11 +1,10 @@
 import React from 'react';
+import './style.css';
 import capy from '../assets/capy.jpg';
 
-export const Blog = () => {
+const Clanek = () => {
   return (
-    <main>
-      <h1>Blog</h1>
-      {/* Tohle je jeden článek */}
+    <>
       <div className="blog__clanek">
         <img height={200} src={capy} alt="Capy" />
         <h3>Název článku</h3>
@@ -15,6 +14,20 @@ export const Blog = () => {
           iste maiores quasi facere explicabo? Perspiciatis, reprehenderit in.
         </p>
       </div>
-    </main>
+    </>
+  );
+};
+
+export const Blog = () => {
+  return (
+    <>
+      <h1>Blog</h1>
+      <main className="main__blog">
+        {/* Tohle je jeden článek */}
+        <Clanek />
+        <Clanek />
+        <Clanek />
+      </main>
+    </>
   );
 };

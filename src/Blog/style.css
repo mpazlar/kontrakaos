@@ -1,0 +1,9 @@
+.main__blog {
+  display: flex;
+  width: 100%;
+}
+
+.blog__clanek {
+  flex-basis: 30%;
+  margin: 10px;
+}

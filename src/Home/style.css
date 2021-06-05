@@ -1,9 +1,9 @@
-main {
+.main__home {
   width: 100%;
   display: flex;
 }
 
-main div {
+.main__home div {
   width: 50%;
 }
 
