@@ -4,7 +4,14 @@ const rollDice = (max) => {
   return Math.floor(Math.random() * max);
 };
 
-export const rozdeleniPraci = (tasks, lidi) => {
+export const rozdeleniPraci = (stateTasks, lidi) => {
+  const tasks = stateTasks.reduce((acc, { jmeno, delka, casto }) => {
+    acc.push(...Array.from({ length: casto }, () => ({ jmeno, delka })));
+    return acc;
+  }, []);
+
+  console.log(tasks);
+
   let osoby = lidi.map((clovek) => ({
     jmeno: clovek,
     prace: [],
