@@ -60,6 +60,7 @@ export const rozdeleniDnu = (oso) => {
     osoba.days[random].tasks.push(...oso[i].prace);
 
     dny.push(osoba);
+    console.log('Tady je nová branch');
   }
 
   return dny;
