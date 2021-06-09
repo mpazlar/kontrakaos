@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import capy from '../assets/capy.jpg';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const Clanek = () => {
   return (
@@ -22,12 +23,14 @@ export const Blog = () => {
   return (
     <>
       <h1>Blog</h1>
-      <main className="main__blog">
-        {/* Tohle je jeden článek */}
-        <Clanek />
-        <Clanek />
-        <Clanek />
-      </main>
+      <Router>
+        <main className="main__blog">
+          {/* Tohle je jeden článek */}
+          <Clanek />
+          <Clanek />
+          <Clanek />
+        </main>
+      </Router>
     </>
   );
 };

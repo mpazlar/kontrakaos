@@ -27,8 +27,8 @@ const App = () => {
                 alt=""
                 onClick={() => setTextContent('')}
               />
+              <h1 className="h1__hidden">{textContent}</h1>
             </Link>
-            <h1 className="h1__hidden">{textContent}</h1>
           </div>
           <div className="nav__bar">
             <div className="nav__links">
@@ -58,21 +58,22 @@ const App = () => {
             </div>
           </div>
         </nav>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/kontrakaos">
-            <Aplikace />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-        </Switch>
-
+        <main>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/kontrakaos">
+              <Aplikace />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/blog">
+              <Blog />
+            </Route>
+          </Switch>
+        </main>
         <footer>
           <div>Vytvořeno v rámci Czechitas DA©</div>
           <div>

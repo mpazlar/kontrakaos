@@ -1,0 +1,21 @@
+.main__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__photo {
+  border-radius: 50%;
+}
+
+.p__person {
+  width: 10%;
+}
