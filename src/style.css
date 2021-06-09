@@ -38,7 +38,7 @@ nav {
 }
 
 .nav__home {
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .nav__home,

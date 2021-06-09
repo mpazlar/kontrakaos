@@ -33,14 +33,6 @@ const App = () => {
           <div className="nav__bar">
             <div className="nav__links">
               <Link
-                to="/about"
-                className="nav__about"
-                onClick={() => setTextContent('KontraKaos')}
-              >
-                O nás
-              </Link>
-
-              <Link
                 to="/kontrakaos"
                 className="nav__app"
                 onClick={() => setTextContent('KontraKaos')}
@@ -54,6 +46,14 @@ const App = () => {
                 onClick={() => setTextContent('KontraKaos')}
               >
                 Blog
+              </Link>
+
+              <Link
+                to="/about"
+                className="nav__about"
+                onClick={() => setTextContent('KontraKaos')}
+              >
+                O nás
               </Link>
             </div>
           </div>
