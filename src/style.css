@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
@@ -18,43 +19,55 @@ nav {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  background-color: #24802f;
+  padding: 15px;
 }
 
-.logo__img {
-  width: 100%;
-}
-
-.nav__logo {
+.logo {
   display: flex;
 }
 
-.nav__logo a {
-  width: 15%;
+.logo__img {
+  width: 25%;
+  display: flex;
+}
+
+.nav__links {
+  justify-content: flex-end;
+}
+
+.nav__home {
+  flex-shrink: 1;
 }
 
 .nav__home,
 .nav__about,
 .nav__app,
-.nav__blog {
+.nav__blog,
+.h1__hidden {
   margin: 10px;
   text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.h1__hidden {
+  align-self: flex-end;
+  text-align: center;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  min-width: 100vw;
 }
 
 .icons__social a {
   margin: 5px;
-}
-
-footer {
-  position: relative;
-  bottom: 0;
 }
 
 .page {
@@ -62,4 +75,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 861px) {
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+  }
 }
