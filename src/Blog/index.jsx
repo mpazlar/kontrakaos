@@ -2,34 +2,27 @@ import React from 'react';
 import './style.css';
 import capy from '../assets/capy.jpg';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-const Clanek = () => {
-  return (
-    <>
-      <div className="blog__clanek">
-        <img height={200} src={capy} alt="Capy" />
-        <h3>Název článku</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus,
-          iste nam. Odit, quas enim velit laboriosam nemo sit amet non ut minus
-          iste maiores quasi facere explicabo? Perspiciatis, reprehenderit in.
-        </p>
-      </div>
-    </>
-  );
-};
+import { ListOfArticles } from '../ListOfArticles';
+import { Article } from '../Article';
 
 export const Blog = () => {
   return (
     <>
       <h1>Blog</h1>
       <Router>
-        <main className="main__blog">
-          {/* Tohle je jeden článek */}
-          <Clanek />
-          <Clanek />
-          <Clanek />
-        </main>
+        <Link to="/">
+          {' '}
+          {/*je tohle dobře??*/}
+          <ListOfArticles />
+        </Link>
+        <Link to="/article">
+          <Article /> {/*zakomponovat Article, na který se klikne*/}
+        </Link>
+
+        <Switch>
+          <Route path="/article"></Route>
+          <Route exact path="/"></Route>
+        </Switch>
       </Router>
     </>
   );
