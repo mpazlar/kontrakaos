@@ -11,7 +11,7 @@ export const AppForm = ({ setTableData }) => {
           <span className="bubble">
             <img
               className="icon"
-              src="../assets/iconQuestion.webp"
+              src="../assets/iconQuestion.png"
               alt=""
               title="Níže přidejte jména osob, které se budou podílet na domácích pracích."
             />
@@ -65,7 +65,7 @@ export const AppForm = ({ setTableData }) => {
                   <span className="bubble">
                     <img
                       className="icon"
-                      src="../assets/iconQuestion.webp"
+                      src="../assets/iconQuestion.png"
                       alt=""
                       title="V této sekci budete vyplňovat jednotlivé domácí práce. Začněte kliknutím na tlačítko Přidat práci"
                     />
@@ -85,7 +85,7 @@ export const AppForm = ({ setTableData }) => {
                                 <span className="bubble">
                                   <img
                                     className="icon"
-                                    src="../assets/iconQuestion.webp"
+                                    src="../assets/iconQuestion.png"
                                     alt=""
                                     title="Sem zadejte název domácí práce, kterou chcete mezi členy/ky domácnosti rozdělit"
                                   />
@@ -98,7 +98,7 @@ export const AppForm = ({ setTableData }) => {
                                 <span className="bubble">
                                   <img
                                     className="icon"
-                                    src="../assets/iconQuestion.webp"
+                                    src="../assets/iconQuestion.png"
                                     alt=""
                                     title="Vyberte předpokládaný čas, který je potřeba na splnění zadané domácí práce."
                                   />
@@ -125,7 +125,7 @@ export const AppForm = ({ setTableData }) => {
                                 <span className="bubble">
                                   <img
                                     className="icon"
-                                    src="../assets/iconQuestion.webp"
+                                    src="../assets/iconQuestion.png"
                                     alt=""
                                     title="Sem zadejte, jak často je potřeba domácí práci dělat."
                                   />
