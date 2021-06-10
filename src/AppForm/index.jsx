@@ -5,110 +5,177 @@ import { rozdeleniDnu, rozdeleniPraci } from '../Funkce';
 export const AppForm = ({ setTableData }) => {
   return (
     <>
-      <h4>Kolik lidí?</h4>
-      <Formik
-        initialValues={{ people: ['Joan'] }}
-        onSubmit={(values) => {
-          const rozdeleniVysledek = rozdeleniPraci(values.tasks, values.people);
+      <div className="app__box">
+        <h3>
+          Kolik lidí?{' '}
+          <span className="bubble">
+            <img
+              className="icon"
+              src="../assets/iconQuestion.webp"
+              alt=""
+              title="Níže přidejte jména osob, které se budou podílet na domácích pracích."
+            />
+          </span>
+        </h3>
+        <Formik
+          initialValues={{ people: ['Joan'] }}
+          onSubmit={(values) => {
+            const rozdeleniVysledek = rozdeleniPraci(
+              values.tasks,
+              values.people,
+            );
 
-          const rozdeleniDoDnuVysledek = rozdeleniDnu(rozdeleniVysledek);
-          setTableData(rozdeleniDoDnuVysledek);
-        }}
-        render={({ values }) => (
-          <Form>
-            <FieldArray
-              name="people"
-              render={({ remove, push }) => (
-                <div className="box__osoby">
-                  <div className="inputs">
+            const rozdeleniDoDnuVysledek = rozdeleniDnu(rozdeleniVysledek);
+            setTableData(rozdeleniDoDnuVysledek);
+          }}
+          render={({ values }) => (
+            <Form>
+              <FieldArray
+                name="people"
+                render={({ remove, push }) => (
+                  <div className="box__persons">
                     {values.people &&
                       values.people.length > 0 &&
                       values.people.map((_, index) => (
-                        <div key={index}>
+                        <div className="input__person" key={index}>
                           <Field name={`people.${index}`} />
-                          <button type="button" onClick={() => remove(index)}>
-                            -
-                          </button>
-                        </div>
-                      ))}
-                  </div>
-                  <button
-                    className="button__add"
-                    type="button"
-                    onClick={() => push('')}
-                  >
-                    +
-                  </button>
-                </div>
-              )}
-            />
-            <div className="box__prace">
-              <FieldArray
-                name="tasks"
-                render={({ remove, push }) => (
-                  <>
-                    {values.tasks &&
-                      values.tasks.length > 0 &&
-                      values.tasks.map((_, index) => (
-                        <div key={index} className="prace">
-                          <h4>Jaká práce?</h4>
-                          <Field name={`tasks.${index}.jmeno`} />
-
-                          <h4>Jak dlouho trvá práci udělat?</h4>
-
-                          <Field
-                            component="select"
-                            name={`tasks.${index}.delka`}
+                          <button
+                            className="button__remove--person"
+                            type="button"
+                            onClick={() => remove(index)}
                           >
-                            <option value="0">Přibližná délka</option>
-                            <option value="10">asi 10 minut</option>
-                            <option value="20">asi 20 minut</option>
-                            <option value="30">asi 30 minut</option>
-                            <option value="40">asi 40 minut</option>
-                            <option value="50">asi 50 minut</option>
-                            <option value="60">asi 60 minut</option>
-                            <option value="70">asi 70 minut</option>
-                            <option value="80">asi 80 minut</option>
-                          </Field>
-
-                          <h4>Jak často se práce opakuje?</h4>
-
-                          <Field
-                            component="select"
-                            name={`tasks.${index}.casto`}
-                          >
-                            <option value="0">Přibližná frekvence</option>
-                            <option value="1">1x týdne</option>
-                            <option value="2">2x týdne</option>
-                            <option value="3">3x týdne</option>
-                            <option value="4">4x týdne</option>
-                            <option value="5">5x týdne</option>
-                            <option value="6">6x týdne</option>
-                            <option value="7">každý den</option>
-                          </Field>
-
-                          <button type="button" onClick={() => remove(index)}>
                             -
                           </button>
                         </div>
                       ))}
 
                     <button
-                      className="button__add"
+                      className="button__add--person"
                       type="button"
                       onClick={() => push('')}
                     >
-                      Přidat práci
+                      Přidat osobu
                     </button>
-                  </>
+                  </div>
                 )}
               />
-            </div>
+              <div className="app__box--tasks">
+                <h3>
+                  Domácí práce{' '}
+                  <span className="bubble">
+                    <img
+                      className="icon"
+                      src="../assets/iconQuestion.webp"
+                      alt=""
+                      title="V této sekci budete vyplňovat jednotlivé domácí práce. Začněte kliknutím na tlačítko Přidat práci"
+                    />
+                  </span>
+                </h3>
+                <div className="box__tasks">
+                  <FieldArray
+                    name="tasks"
+                    render={({ remove, push }) => (
+                      <>
+                        {values.tasks &&
+                          values.tasks.length > 0 &&
+                          values.tasks.map((_, index) => (
+                            <div key={index} className="task">
+                              <h4>
+                                Jaká práce?{' '}
+                                <span className="bubble">
+                                  <img
+                                    className="icon"
+                                    src="../assets/iconQuestion.webp"
+                                    alt=""
+                                    title="Sem zadejte název domácí práce, kterou chcete mezi členy/ky domácnosti rozdělit"
+                                  />
+                                </span>
+                              </h4>
+                              <Field name={`tasks.${index}.jmeno`} />
 
-            <button>Odeslat</button>
-          </Form>
-        )}
-      />
+                              <h4>
+                                Jak dlouho trvá práci udělat?{' '}
+                                <span className="bubble">
+                                  <img
+                                    className="icon"
+                                    src="../assets/iconQuestion.webp"
+                                    alt=""
+                                    title="Vyberte předpokládaný čas, který je potřeba na splnění zadané domácí práce."
+                                  />
+                                </span>
+                              </h4>
+
+                              <Field
+                                component="select"
+                                name={`tasks.${index}.delka`}
+                              >
+                                <option value="0">Přibližná délka</option>
+                                <option value="10">asi 10 minut</option>
+                                <option value="20">asi 20 minut</option>
+                                <option value="30">asi 30 minut</option>
+                                <option value="40">asi 40 minut</option>
+                                <option value="50">asi 50 minut</option>
+                                <option value="60">asi 60 minut</option>
+                                <option value="70">asi 70 minut</option>
+                                <option value="80">asi 80 minut</option>
+                              </Field>
+
+                              <h4>
+                                Jak často se práce opakuje?{' '}
+                                <span className="bubble">
+                                  <img
+                                    className="icon"
+                                    src="../assets/iconQuestion.webp"
+                                    alt=""
+                                    title="Sem zadejte, jak často je potřeba domácí práci dělat."
+                                  />
+                                </span>
+                              </h4>
+
+                              <Field
+                                component="select"
+                                name={`tasks.${index}.casto`}
+                              >
+                                <option value="0">Přibližná frekvence</option>
+                                <option value="1">1x týdne</option>
+                                <option value="2">2x týdne</option>
+                                <option value="3">3x týdne</option>
+                                <option value="4">4x týdne</option>
+                                <option value="5">5x týdne</option>
+                                <option value="6">6x týdne</option>
+                                <option value="7">každý den</option>
+                              </Field>
+
+                              <button
+                                className="button__remove--task"
+                                type="button"
+                                onClick={() => remove(index)}
+                              >
+                                Odebrat práci
+                              </button>
+                            </div>
+                          ))}
+
+                        <button
+                          className="button__add--task"
+                          type="button"
+                          onClick={() => push('')}
+                        >
+                          Přidat práci
+                        </button>
+                      </>
+                    )}
+                  />
+                </div>
+              </div>
+
+              <button className="button__submit">
+                Vygenerovat rozvrh domácích prací
+              </button>
+            </Form>
+          )}
+        />
+      </div>
     </>
   );
 };

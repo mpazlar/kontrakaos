@@ -11,3 +11,10 @@ td,
 th {
   padding: 5px;
 }
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
