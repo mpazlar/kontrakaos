@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <main className="main__about">
       <h1>O nás</h1>
-      <a target="_blank" href="https://kontrakaos.netlify.app/">
+      <a target="_blank" href="https://kontrakaos-about.netlify.app/">
         KontraKaos | o projektu
       </a>
       <div className="person">

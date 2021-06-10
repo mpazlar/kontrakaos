@@ -49,12 +49,14 @@ const rozdeleniPokus = (ukoly) => {
 
   for (let i = 0; i < ukoly.length; i++) {
     let random = rollDiceDay(6);
-
+    days[random].tasks.push(ukoly[i]);
+    /*
     while (i < ukoly.length) {
       random = days[random].tasks.push(ukoly[i]);
 
       i++;
     }
+    */
   }
   return days;
 };
