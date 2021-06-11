@@ -6,7 +6,7 @@ export const Home = () => {
     <main className="main__home">
       <div className="left">
         <h1>KontraKaos</h1>
-        <p>Tady bude claim</p>
+        <p className="claim">Abychom nestrávily celý život úklidem</p>
         <a href="/kontrakaos">Chci vyzkoušet aplikaci!</a>
       </div>
       <div className="right">

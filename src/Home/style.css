@@ -16,6 +16,34 @@
   align-items: center;
 }
 
+p {
+  text-align: center;
+}
+
+.claim {
+  font-family: 'Merienda', cursive;
+  font-size: medium;
+  margin: 0 0 1em 0;
+}
+
+.right p {
+  width: 75%;
+}
+
+.left a {
+  border: solid 2px #003f08;
+  border-radius: 15px;
+  padding: 0.8em;
+  background-color: #24802f;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.left a:hover {
+  background-color: #419c4c;
+}
+
 @media screen and (min-width: 861px) {
   .main__home {
     width: 100%;
@@ -25,7 +53,8 @@
   .main__home div {
     width: 50%;
   }
-}
-p {
-  text-align: center;
+
+  .right p {
+    width: 90%;
+  }
 }

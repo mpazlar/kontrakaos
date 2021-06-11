@@ -23,12 +23,13 @@ body {
 }
 
 nav {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
   background-color: #24802f;
+  border-bottom: solid 2px #003f08;
   padding: 15px;
   height: 10em;
 }
@@ -64,10 +65,15 @@ main {
 .nav__about,
 .nav__app,
 .nav__blog {
-  margin: 10px;
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
   color: white;
+}
+
+.nav__about:hover,
+.nav__app:hover,
+.nav__blog:hover {
+  background-color: #419c4c;
 }
 
 .h1__hidden {
@@ -82,6 +88,7 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: smaller;
   position: relative;
   bottom: 0;
   max-width: 100vw;
