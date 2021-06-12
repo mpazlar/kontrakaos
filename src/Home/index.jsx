@@ -6,10 +6,11 @@ export const Home = () => {
     <main className="main__home">
       <div className="left">
         <h1>KontraKaos</h1>
-        <p className="claim">Abychom nestrávily celý život úklidem</p>
-        <a className="button__app" href="/kontrakaos">
-          Chci vyzkoušet aplikaci!
-        </a>
+        <p className="claim">
+          Jediná spravedlnost na tomhle světě je náhoda. - Harvey Dent, Batman:
+          Temný rytíř (2008)
+        </p>
+        <a href="/kontrakaos">Chci vyzkoušet aplikaci!</a>
       </div>
       <div className="right">
         <p>
@@ -19,9 +20,10 @@ export const Home = () => {
           nefunguje, je to chaos. Často se stává, že vypořádání se s tímto
           chaosem leží na bedrech několika málo lidí. Potom je péče o domácnost
           taky pěkná otrava. Proto jsme stvořily KontraKaos, který vám pomůže se
-          spravedlivým rozdělením domácích prací mezi členy a členky domácnosti.
-          Do aplikace jednoduše zadáte domácí práce a KontraKaos se již postará
-          o to, aby se všichni na domácích pracích podíleli stejným dílem.
+          spravedlivějším rozdělením domácích prací mezi členy a členky
+          domácnosti. Do aplikace jednoduše zadáte domácí práce a KontraKaos se
+          již postará o to, aby se všichni práce mezi členy domácnosti rozdělily
+          podle náhody.
         </p>
       </div>
     </main>

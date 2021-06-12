@@ -27,8 +27,7 @@ export const Aplikace = () => {
           do nabídky zadejte domácí práce, které je potřeba vykonávat. Až zadáte
           všechny domácí práce, které je potřeba vykonat, tlačítkem spustíte
           výpočet přerozdělení zadaných prací mezi členy/ky domácnosti. Na další
-          stránce se můžete podívat na vygenerovanou tabulku, kterou si můžete
-          stáhnout či vytisknout.
+          stránce se můžete podívat na vygenerovanou tabulku.
         </p>
       </div>
       <AppForm setTableData={setTableData} />
