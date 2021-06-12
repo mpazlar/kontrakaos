@@ -100,6 +100,11 @@ footer {
   padding: 5px;
 }
 
+a {
+  color: #003f08;
+  margin-bottom: 7px;
+}
+
 @media screen and (max-width: 861px) {
   .nav__links {
     display: flex;

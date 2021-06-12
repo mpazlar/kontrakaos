@@ -7,7 +7,9 @@ export const Home = () => {
       <div className="left">
         <h1>KontraKaos</h1>
         <p className="claim">Abychom nestrávily celý život úklidem</p>
-        <a href="/kontrakaos">Chci vyzkoušet aplikaci!</a>
+        <a className="button__app" href="/kontrakaos">
+          Chci vyzkoušet aplikaci!
+        </a>
       </div>
       <div className="right">
         <p>

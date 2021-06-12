@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { Formik, Form, Field, FieldArray } from 'formik';
 import { rozdeleniDnu, rozdeleniPraci } from '../Funkce';
 
