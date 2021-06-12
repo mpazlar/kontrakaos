@@ -49,14 +49,15 @@ const rozdeleniPokus = (ukoly) => {
 
   for (let i = 0; i < ukoly.length; i++) {
     let random = rollDiceDay(6);
-    days[random].tasks.push(ukoly[i]);
-    /*
-    while (i < ukoly.length) {
-      random = days[random].tasks.push(ukoly[i]);
 
-      i++;
+    console.log(days[random].tasks.find((chore) => chore.jmeno === ukoly[i]));
+    /*
+    while (days[random].tasks.find((chore) => chore.jmeno === ukoly[i])) {
+      console.log(chore);
+      random = rollDiceDay(6);
     }
-    */
+*/
+    days[random].tasks.push(ukoly[i]);
   }
   return days;
 };
@@ -65,7 +66,6 @@ const pokus = [
   { jmeno: 'nadobi', delka: '10' },
   { jmeno: 'lux', delka: '20' },
   { jmeno: 'koupelna', delka: '30' },
-  { jmeno: 'nadobi', delka: '10' },
   { jmeno: 'nadobi', delka: '10' },
   { jmeno: 'nadobi', delka: '10' },
 ];
