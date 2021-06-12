@@ -19,7 +19,7 @@ export const AppForm = ({ setTableData }) => {
           </span>
         </h3>
         <Formik
-          initialValues={{ people: ['Joan'] }}
+          initialValues={{ people: [''] }}
           onSubmit={(values) => {
             const rozdeleniVysledek = rozdeleniPraci(
               values.tasks,
