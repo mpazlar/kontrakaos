@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 
 export const Table = ({ data }) => {
+  console.log(data);
   return (
     <>
       <div className="table">
@@ -13,7 +14,7 @@ export const Table = ({ data }) => {
           příjemným mísem k žití. Spokojenější budou všichni - těm přetíženým se
           uleví a ubyde třenic a nepříjemností nad neumytým nádobím.
         </p>
-        <table>
+        <table style={{ display: data.length === 0 ? 'none' : 'block' }}>
           <thead>
             <tr className="dny">
               <th>Osoba</th>
@@ -27,10 +28,6 @@ export const Table = ({ data }) => {
             </tr>
           </thead>
           {data.map((dt) => {
-            console.log(dt.days[0].tasks);
-            console.log(dt.days[1].tasks);
-            console.log(dt.days[2].tasks);
-            console.log(dt.days[3].tasks);
             return (
               <tbody>
                 <tr>

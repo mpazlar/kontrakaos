@@ -18,9 +18,10 @@ export const About = () => {
           alt="Magda"
         />
         <p className="p__person">
-          Majda je hispanistka z Prahy. Má psa Luckyho, vždy perfektní manikúru
-          a má ráda jídlo. Ve světe IT ji baví především React a Javascript. Až
-          bude velká, nechce být ovocem do Jogobelly, ale kodérkou ve Španělsku.
+          Majda je hispanistka z Prahy. Má psa Luckyho, vždy nalakované nehty a
+          má ráda jídlo. Ve světe IT ji baví především React a Javascript. Až
+          bude velká, chce vidět celý svět a programovat stejně tak dobře, jako
+          Luděk. Kokosům zdar!
         </p>
       </div>
       <div className="person">
