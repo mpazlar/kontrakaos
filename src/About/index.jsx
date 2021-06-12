@@ -41,7 +41,12 @@ export const About = () => {
       </div>
       <div className="person">
         <h3>Zdeněk Sotolář</h3>
-        <img className="img__photo" height={110} src="" alt="Capy" />
+        <img
+          className="img__photo"
+          height={110}
+          src="../assets/zdenek.jpg"
+          alt="Zdeněk"
+        />
         <p className="p__person">
           Zdeněk je mentor, který Majdě a Verči pomáhá se směřováním projektu.
           Přispěl mnoha radami a vlastnoručně uvařenou večeří. Těšíme se, až se
