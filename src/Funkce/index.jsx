@@ -63,6 +63,7 @@ const rozdeleniPokus = (ukoly) => {
   return days;
 };
 
+/*
 const pokus = [
   { jmeno: 'nadobi', delka: '10' },
   { jmeno: 'lux', delka: '20' },
@@ -76,7 +77,7 @@ const pokus = [
 ];
 
 console.log(rozdeleniPokus(pokus));
-
+*/
 export const rozdeleniDnu = (oso) => {
   const dny = [];
 

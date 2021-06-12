@@ -1,16 +1,6 @@
 import React from 'react';
 import './style.css';
 
-/*
-const projitTasks = (task) => {
-  let vysledek = '';
-  for (let i = 0; i < task.length; i++) {
-    vysledek += ` ${task[i].jmeno} `;
-  }
-  console.log(vysledek);
-  return vysledek;
-};
-*/
 export const Table = ({ data }) => {
   return (
     <>
