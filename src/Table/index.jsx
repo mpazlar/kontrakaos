@@ -37,49 +37,49 @@ export const Table = ({ data }) => {
                   <td>{dt.name}</td>
 
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[0].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[1].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[2].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[3].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[4].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[5].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[6].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
