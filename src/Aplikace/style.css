@@ -23,9 +23,29 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-
+.no__bullets {
+  list-style-type: none;
+}
+/* on-screen styles */
 @media screen and (min-width: 1200px) {
   .main__app {
     width: 60%;
+  }
+}
+
+/* print styles */
+@media print {
+  .app__heading,
+  footer,
+  .app__container,
+  nav,
+  .table__name,
+  .table__content {
+    display: none !important;
+    size: 0;
+  }
+  .table {
+    display: block;
+    font-size: 15pt;
   }
 }

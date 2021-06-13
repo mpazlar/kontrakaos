@@ -5,7 +5,7 @@ import { rozdeleniDnu, rozdeleniPraci } from '../Funkce';
 
 export const AppForm = ({ setTableData }) => {
   return (
-    <div className="app">
+    <div className="app__container">
       <div className="app__box">
         <h3>
           Kolik lidí?{' '}

@@ -6,9 +6,9 @@ export const Table = ({ data }) => {
   return (
     <>
       <div className="table">
-        <h2>Rozvrh domácích prací</h2>
-        <p>A je to hotovo! </p>
-        <p>
+        <h2 className="table__name">Rozvrh domácích prací</h2>
+        <p className="table__content">A je to hotovo! </p>
+        <p className="table__content">
           KontraKaos vám rozdělil domácí práce mezi všechny členy/ky domácnosti.
           Díky tomu se budou všichni podílet na tom, aby byla vaše domácnost
           příjemným mísem k žití. Spokojenější budou všichni - těm přetíženým se
@@ -34,49 +34,49 @@ export const Table = ({ data }) => {
                   <td>{dt.name}</td>
 
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[0].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[1].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[2].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[3].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[4].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[5].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul className="no__bullets">
                       {dt.days[6].tasks.map((d, i) => (
                         <li key={i}>{d.jmeno}</li>
                       ))}
