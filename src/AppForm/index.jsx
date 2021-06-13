@@ -5,7 +5,7 @@ import { rozdeleniDnu, rozdeleniPraci } from '../Funkce';
 
 export const AppForm = ({ setTableData }) => {
   return (
-    <>
+    <div className="app">
       <div className="app__box">
         <h3>
           Kolik lidí?{' '}
@@ -177,6 +177,6 @@ export const AppForm = ({ setTableData }) => {
           )}
         />
       </div>
-    </>
+    </div>
   );
 };
