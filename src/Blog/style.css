@@ -3,3 +3,15 @@
   width: 100%;
   justify-content: center;
 }
+
+@media screen and (min-width: 1200px) {
+  .main__blog {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .blog__clanek {
+    flex-basis: 30%;
+    align-self: flex-start;
+  }
+}

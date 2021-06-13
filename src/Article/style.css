@@ -1,6 +1,7 @@
 .blog__clanek {
   flex-basis: 30%;
   margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

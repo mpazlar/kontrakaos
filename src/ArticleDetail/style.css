@@ -1,3 +1,17 @@
-h3 {
-  font-family: 'Merienda', cursive;
+.detail__title {
+  font-family: 'Kalam', cursive;
+}
+
+.detail__article {
+  width: 80%;
+}
+
+.detail__perex,
+.detail__content {
+  text-align: justify;
+  margin-bottom: 2em;
+}
+
+.detail__perex {
+  font-weight: bold;
 }

@@ -5,7 +5,10 @@ export const Table = ({ data }) => {
   console.log(data);
   return (
     <>
-      <div className="table">
+      <div
+        className="box__table"
+        style={{ display: data.length === 0 ? 'none' : 'flex' }}
+      >
         <h2>Rozvrh domácích prací</h2>
         <p>A je to hotovo! </p>
         <p>
@@ -14,7 +17,7 @@ export const Table = ({ data }) => {
           příjemným mísem k žití. Spokojenější budou všichni - těm přetíženým se
           uleví a ubyde třenic a nepříjemností nad neumytým nádobím.
         </p>
-        <table style={{ display: data.length === 0 ? 'none' : 'block' }}>
+        <table>
           <thead>
             <tr className="dny">
               <th>Osoba</th>

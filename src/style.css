@@ -12,8 +12,9 @@ html {
 }
 
 h1,
-h2 {
-  font-family: 'Merienda', cursive;
+h2,
+h3 {
+  font-family: 'Kalam', cursive;
   text-align: center;
 }
 
@@ -33,8 +34,7 @@ nav {
   height: 10em;
 }
 main {
-  min-height: calc(100vh - 15em - 25px);
-  flex-grow: 1;
+  min-height: 100vh;
   padding: 10px;
 }
 .logo {

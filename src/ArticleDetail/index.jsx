@@ -4,14 +4,28 @@ import './style.css';
 
 export const ArticleDetail = () => {
   const { id } = useParams();
+
+  const [article, setArticle] = useState([]);
+  useEffect(() => {
+    fetch(
+      `https://www.develop-sr3snxi-mvvau5npwquee.de-2.platformsh.site/blogs/${id}`,
+    )
+      .then((response) => response.json())
+      .then((json) => setArticle(json));
+  }, []);
+
   console.log(id);
   return (
     <>
-      <div className={`detail__clanek`}>
-        <img height={200} src={photo} alt={alt} />
-        <h3>{title}</h3>
-        <div className="detail__perex">{perex}</div>
-        <div className="detail__content">{content}</div>
+      <div className={`detail__article`}>
+        <img
+          height={200}
+          src={article.image?.formats?.medium?.url}
+          alt={article.alt}
+        />
+        <h2 className="detail__title">{article.title}</h2>
+        <div className="detail__perex">{article.perex}</div>
+        <div className="detail__content">{article.content}</div>
       </div>
     </>
   );

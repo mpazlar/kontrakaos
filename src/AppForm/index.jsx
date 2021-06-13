@@ -7,7 +7,7 @@ export const AppForm = ({ setTableData }) => {
   return (
     <div className="app">
       <div className="app__box">
-        <h3>
+        <h4>
           Kolik lidí?{' '}
           <span className="bubble">
             <img
@@ -17,7 +17,7 @@ export const AppForm = ({ setTableData }) => {
               title="Níže přidejte jména osob, které se budou podílet na domácích pracích."
             />
           </span>
-        </h3>
+        </h4>
         <Formik
           initialValues={{ people: [''] }}
           onSubmit={(values) => {
@@ -61,7 +61,7 @@ export const AppForm = ({ setTableData }) => {
                 )}
               />
               <div className="app__box--tasks">
-                <h3>
+                <h4>
                   Domácí práce{' '}
                   <span className="bubble">
                     <img
@@ -71,7 +71,7 @@ export const AppForm = ({ setTableData }) => {
                       title="V této sekci budete vyplňovat jednotlivé domácí práce. Začněte kliknutím na tlačítko Přidat práci"
                     />
                   </span>
-                </h3>
+                </h4>
                 <div className="box__tasks">
                   <FieldArray
                     name="tasks"

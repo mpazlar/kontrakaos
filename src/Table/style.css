@@ -12,9 +12,12 @@ th {
   padding: 5px;
 }
 
-.table {
-  display: flex;
+.box__table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+table {
+  align-self: center;
 }
