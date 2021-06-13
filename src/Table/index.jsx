@@ -6,12 +6,12 @@ export const Table = ({ data }) => {
   return (
     <>
       <div
-        className="box__table"
+        className="box__table table"
         style={{ display: data.length === 0 ? 'none' : 'flex' }}
       >
-        <h2>Rozvrh domácích prací</h2>
-        <p>A je to hotovo! </p>
-        <p>
+        <h2 className="table__name">Rozvrh domácích prací</h2>
+        <p className="table__content">A je to hotovo! </p>
+        <p className="table__content">
           KontraKaos vám rozdělil domácí práce mezi všechny členy/ky domácnosti.
           Díky tomu se budou všichni podílet na tom, aby byla vaše domácnost
           příjemným mísem k žití. Spokojenější budou všichni - těm přetíženým se

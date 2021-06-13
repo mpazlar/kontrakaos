@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import './style.css';
 
 export const ArticleDetail = () => {
@@ -25,7 +26,9 @@ export const ArticleDetail = () => {
         />
         <h2 className="detail__title">{article.title}</h2>
         <div className="detail__perex">{article.perex}</div>
-        <div className="detail__content">{article.content}</div>
+        <div className="detail__content">
+          <ReactMarkdown>{article.content}</ReactMarkdown>
+        </div>
       </div>
     </>
   );
