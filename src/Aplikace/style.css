@@ -1,8 +1,12 @@
-.main_app {
+.main__app,
+main {
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   min-height: 100vh;
+  text-align: center;
 }
 
 p {
@@ -18,4 +22,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__app {
+    width: 60%;
+  }
 }
