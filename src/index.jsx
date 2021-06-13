@@ -6,6 +6,7 @@ import { Aplikace } from './Aplikace';
 import { Home } from './Home';
 import { About } from './About';
 import { Blog } from './Blog';
+import { ArticleDetail } from './ArticleDetail';
 
 const App = () => {
   const [textContent, setTextContent] = useState('');
@@ -69,8 +70,11 @@ const App = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/blog">
+            <Route exact path="/blog">
               <Blog />
+            </Route>
+            <Route exact path="/blog/:id">
+              <ArticleDetail />
             </Route>
           </Switch>
         </main>

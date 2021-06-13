@@ -63,21 +63,6 @@ const rozdeleniPokus = (ukoly) => {
   return days;
 };
 
-/*
-const pokus = [
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'lux', delka: '20' },
-  { jmeno: 'koupelna', delka: '30' },
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'nadobi', delka: '10' },
-  { jmeno: 'nadobi', delka: '10' },
-];
-
-console.log(rozdeleniPokus(pokus));
-*/
 export const rozdeleniDnu = (oso) => {
   const dny = [];
 
