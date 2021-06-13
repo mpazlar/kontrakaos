@@ -3,9 +3,3 @@
   width: 100%;
   justify-content: center;
 }
-
-@media screen and (max-width: 860px) {
-  .main__blog {
-    flex-direction: column;
-  }
-}
