@@ -5,4 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
+}
+
+.blog__clanek a {
+  text-decoration: none;
+}
+
+.blog__clanek img {
+  height: 10em;
 }

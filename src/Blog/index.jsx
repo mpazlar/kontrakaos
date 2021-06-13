@@ -12,7 +12,6 @@ export const Blog = () => {
       <Router>
         <Link to="/">
           {' '}
-          {/*je tohle dobře??*/}
           <ListOfArticles />
         </Link>
         <Link to="/article">
