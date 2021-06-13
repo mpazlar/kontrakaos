@@ -16,3 +16,7 @@
 .blog__clanek img {
   height: 10em;
 }
+
+.article__title {
+  font-family: 'Kalam', cursive;
+}

@@ -1,5 +1,5 @@
 .detail__title {
-  font-family: 'Kalam', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .detail__article {
@@ -14,4 +14,13 @@
 
 .detail__perex {
   font-weight: bold;
+}
+
+p {
+  text-align: justify;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
 }
