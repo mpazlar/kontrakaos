@@ -15,7 +15,6 @@ export const ArticleDetail = () => {
       .then((json) => setArticle(json));
   }, []);
 
-  console.log(id);
   return (
     <>
       <div className={`detail__article`}>
