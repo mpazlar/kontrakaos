@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 
 export const Table = ({ data }) => {
-  console.log(data);
   return (
     <>
       <div

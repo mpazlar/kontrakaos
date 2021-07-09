@@ -13,8 +13,6 @@ export const ListOfArticles = () => {
       .then((json) => setList(json));
   }, []);
 
-  console.log('list of articles');
-
   return (
     <>
       <main className="main__blog">

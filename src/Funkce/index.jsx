@@ -54,7 +54,6 @@ const rozdeleniPokus = (ukoly) => {
       days[random].tasks.find((chore) => chore.jmeno === ukoly[i].jmeno) &&
       cycle < 15
     ) {
-      console.log(cycle);
       random = rollDiceDay(7);
       cycle++;
     }
@@ -71,7 +70,7 @@ export const rozdeleniDnu = (oso) => {
       name: oso[i].jmeno,
       days: rozdeleniPokus(oso[i].prace),
     };
-    console.log(osoba);
+
     dny.push(osoba);
   }
 
