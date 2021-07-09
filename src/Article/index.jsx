@@ -8,7 +8,7 @@ export const Article = ({ id, title, perex, photo, alt }) => {
       <div className={`blog__clanek articleId${id}`}>
         <img src={photo} alt={alt} />
         <Link to={`/blog/${id}`}>
-          <h3>{title}</h3>
+          <h3 className = 'article__title'>{title}</h3>
         </Link>
         <div className="article__perex">{perex}</div>
       </div>
