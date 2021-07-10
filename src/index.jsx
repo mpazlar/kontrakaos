@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import './style.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -9,51 +9,27 @@ import { Blog } from './Blog';
 import { ArticleDetail } from './ArticleDetail';
 
 const App = () => {
-  const [textContent, setTextContent] = useState('');
-
   return (
     <>
       <Router>
         <nav>
           <div className="logo">
-            <Link
-              to="/"
-              className="nav__home"
-              onClick={() => setTextContent('')}
-            >
+            <Link to="/" className="nav__home">
               {' '}
-              <img
-                className="logo__img"
-                src="./assets/logo_prototyp_no_background.svg"
-                alt=""
-                onClick={() => setTextContent('')}
-              />
-              <h1 className="h1__hidden">{textContent}</h1>
+              <img className="logo__img" src="./assets/umyval.png" alt="" />
             </Link>
           </div>
           <div className="nav__bar">
             <div className="nav__links">
-              <Link
-                to="/kontrakaos"
-                className="nav__app"
-                onClick={() => setTextContent('KontraKaos')}
-              >
+              <Link to="/kontrakaos" className="nav__app">
                 Aplikace
               </Link>
 
-              <Link
-                to="/blog"
-                className="nav__blog"
-                onClick={() => setTextContent('KontraKaos')}
-              >
+              <Link to="/blog" className="nav__blog">
                 Blog
               </Link>
 
-              <Link
-                to="/about"
-                className="nav__about"
-                onClick={() => setTextContent('KontraKaos')}
-              >
+              <Link to="/about" className="nav__about">
                 O nás
               </Link>
             </div>
