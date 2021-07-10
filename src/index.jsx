@@ -19,20 +19,18 @@ const App = () => {
               <img className="logo__img" src="./assets/umyval.png" alt="" />
             </Link>
           </div>
-          <div className="nav__bar">
-            <div className="nav__links">
-              <Link to="/kontrakaos" className="nav__app">
-                Aplikace
-              </Link>
+          <div className="nav__links">
+            <Link to="/kontrakaos" className="nav__app">
+              Aplikace
+            </Link>
 
-              <Link to="/blog" className="nav__blog">
-                Blog
-              </Link>
+            <Link to="/blog" className="nav__blog">
+              Blog
+            </Link>
 
-              <Link to="/about" className="nav__about">
-                O nás
-              </Link>
-            </div>
+            <Link to="/about" className="nav__about">
+              O nás
+            </Link>
           </div>
         </nav>
         <main>
