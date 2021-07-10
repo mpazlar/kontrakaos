@@ -66,11 +66,7 @@ main {
 .nav__app,
 .nav__blog {
   margin: 15px 0 15px 0;
-
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px 15px 5px 15px;
   text-decoration: none;
   color: #ddfde1;
 }
